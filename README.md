@@ -1,6 +1,8 @@
 Difference between Blindfold Sunfish and Sunfish
 =======
 Blindfold doesn't print the board, and I made it a bit easier to play for practicing blindfold chess. You only see the algebraic notation. 
+Text to speech only works for OS X since I couldn't get pyttsx to work yet. Also changing it to espeak for linux will work on lines 392/394. 
+
 
 Sunfish
 =======
