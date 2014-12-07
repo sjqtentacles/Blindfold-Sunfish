@@ -5,6 +5,8 @@ from __future__ import print_function
 import sys
 from itertools import count
 from collections import Counter, OrderedDict, namedtuple
+from os import system
+import time
 
 # The table size is the maximum number of elements in the transposition table.
 TABLE_SIZE = 1e6
@@ -384,7 +386,12 @@ def main():
 
         # The black player moves from a rotated position, so we have to
         # 'back rotate' the move before printing it.
-        print("My move:", render(119-move[0]) + render(119-move[1]))
+        origPos = render(119-move[0])
+        destPos = render(119-move[1])
+        print("My move:", origPos + destPos)
+        system('say '+origPos)
+        time.sleep(0.1)
+        system('say '+destPos)
         pos = pos.move(move)
 
 
